@@ -1,0 +1,84 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "Hola",
+        "Hey",
+        "¿Cómo estás?",
+        "¿Hay alguien ahí?",
+        "Hola",
+        "Buen día"
+      ],
+      "responses": [
+        "¡Hola! :-)",
+        "Hola, gracias por visitarnos",
+        "Hola, ¿en qué puedo ayudarte?",
+        "¡Hola! ¿Cómo puedo ayudarte?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["Adiós", "Nos vemos", "Chao"],
+      "responses": [
+        "¡Hasta pronto! Gracias por visitarnos",
+        "Que tengas un buen día",
+        "¡Adiós! ¡Vuelve pronto!"
+      ]
+    },
+    {
+      "tag": "agradecimiento",
+      "patterns": ["Gracias", "Muchas gracias", "Eso es útil", "¡Muchas gracias!"],
+      "responses": ["¡Feliz de ayudar!", "¡Cualquier cosa!", "¡Es un placer!"]
+    },
+    {
+      "tag": "productos",
+      "patterns": [
+        "¿Qué productos tienen?",
+        "¿Qué tipos de productos hay?",
+        "¿Qué venden?"
+      ],
+      "responses": [
+        "Vendemos café y té",
+        "Tenemos café y té"
+      ]
+    },
+    {
+      "tag": "pagos",
+      "patterns": [
+        "¿Aceptan tarjetas de crédito?",
+        "¿Aceptan Mastercard?",
+        "¿Puedo pagar con Paypal?",
+        "¿Sólo efectivo?"
+      ],
+      "responses": [
+        "Aceptamos VISA, Mastercard y Paypal",
+        "Aceptamos la mayoría de las principales tarjetas de crédito y Paypal"
+      ]
+    },
+    {
+      "tag": "envío",
+      "patterns": [
+        "¿Cuánto tarda la entrega?",
+        "¿Cuanto tiempo tarda el envio?",
+        "¿Cuándo recibo mi entrega?"
+      ],
+      "responses": [
+        "La entrega tarda de 2 a 4 días",
+        "El envío tarda de 2 a 4 días"
+      ]
+    },
+    {
+      "tag": "chiste",
+      "patterns": [
+        "¡Cuéntame un chiste!",
+        "¡Dime algo gracioso!",
+        "¿Conoces algún chiste?"
+      ],
+      "responses": [
+        "¿Por qué el hipster se quemó la boca? Bebió el café antes de que estuviera fresco.",
+        "¿Qué dijo el búfalo cuando su hijo se fue a la universidad? Bison."
+      ]
+    }
+  ]
+}
