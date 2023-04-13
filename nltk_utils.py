@@ -1,8 +1,9 @@
+from unidecode import unidecode
 import numpy as np
 import nltk
-# nltk.download('punkt')
-from nltk.stem.porter import PorterStemmer
-stemmer = PorterStemmer()
+nltk.download('omw')
+from nltk.stem.snowball import SpanishStemmer
+stemmer = SpanishStemmer()
 
 
 def tokenize(sentence):
@@ -10,7 +11,9 @@ def tokenize(sentence):
     split sentence into array of words/tokens
     a token can be a word or punctuation character, or number
     """
-    return nltk.word_tokenize(sentence)
+    sentence = unidecode(sentence) # remove accents and special characters
+    tokens = nltk.word_tokenize(sentence, language='spanish')
+    return [token.lower() for token in tokens if token.isalnum()]
 
 
 def stem(word):

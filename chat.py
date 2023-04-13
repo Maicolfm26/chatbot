@@ -8,7 +8,7 @@ from nltk_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('intents.json', 'r') as json_data:
+with open('intents.json', 'r', encoding='utf-8') as json_data:
     intents = json.load(json_data)
 
 FILE = "data.pth"
@@ -58,12 +58,12 @@ def writeConversation(msg, response):
                     "output": response
                 }
     
-    with open("conversation.json", "r") as archivo:
+    with open("conversation.json", "rb") as archivo:
         datos = json.load(archivo)
 
     datos["conversaciones"].append(conversation)
 
-    with open("conversation.json", "w") as archivo:
+    with open("conversation.json", "w", encoding="utf-8") as archivo:
         json.dump(datos, archivo, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":

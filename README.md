@@ -16,7 +16,7 @@ Instalar paquete nltk
 ```
 $ (venv) python
 >>> import nltk
->>> nltk.download('punkt')
+>>> nltk.download('omw')
 ```
 Modificar intents.json con diferentes intenciones y respuestas para su Chatbot
 

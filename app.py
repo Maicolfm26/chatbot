@@ -1,3 +1,4 @@
+import click
 from flask import Flask, render_template, request, jsonify
 
 from chat import get_response
@@ -16,5 +17,11 @@ def predict():
     message = {"answer": response}
     return message
 
-if __name__ == "__main__":
-    app.run(debug=True)
+@click.command()
+@click.option('--encoding', default='utf-8', help='Establecer la codificación predeterminada.')
+def runserver(encoding):
+    """Inicia el servidor Flask."""
+    app.run()
+
+if __name__ == '__main__':
+    runserver()

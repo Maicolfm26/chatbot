@@ -56,7 +56,7 @@ class Chatbox {
           })
           .then(r => r.json())
           .then(r => {
-            let response = decodeURIComponent(escape(r.answer))
+            let response = r.answer
             let msg2 = { name: "Sam", message: response };
             this.messages.push(msg2);
             this.updateChatText(chatbox)
